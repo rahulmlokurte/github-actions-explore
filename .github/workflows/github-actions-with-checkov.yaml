@@ -20,3 +20,5 @@ jobs:
       - name: Test with Checkov
         id: checkov
         uses: bridgecrewio/checkov-action@master
+        with:
+          directory: /github-actions-with-checkov
