@@ -21,6 +21,3 @@ jobs:
           pip install --upgrade setuptools
           pip install --upgrade wheel
           pip install --upgrade checkov
-        with:
-          directory: /github-actions-with-checkov
-          framework: terraform
