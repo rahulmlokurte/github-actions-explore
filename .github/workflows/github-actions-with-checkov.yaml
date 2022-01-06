@@ -1,0 +1,26 @@
+---
+name: GitHub Actions with Checkov
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: /github-actions-with-checkov
+    steps:
+      - uses: actions/checkout@v2
+      - name: SetUp Python 3.8
+        run: |
+          python3.8 -m venv .venv
+          source .venv/bin/activate
+          pip install --upgrade pip
+          pip install --upgrade setuptools
+          pip install --upgrade wheel
+          pip install --upgrade checkov
+        with:
+          directory: /github-actions-with-checkov
+          framework: terraform
