@@ -14,3 +14,10 @@ The GitHub Actions workflow will:
 - It will apply the Terraform plan to the Terraform environment when we update the main branch.
 
 ---
+
+### [GitHub Actions with Checkov](./github-actions-with-checkov/)
+
+This will set up a GitHub Actions workflow to run Checkov on every push to master.
+The GitHub Actions workflow will:
+- check for the format of the Checkov configuration file.
+- It will run Checkov on every push to master.
