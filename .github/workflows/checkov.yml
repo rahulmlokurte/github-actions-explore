@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run Checkov
-        uses: checkov/checkov@v1
+        uses: bridgecrewio/checkov-action@master
         with:
           path: /github-actions-with-checkov
           report_file: checkov.report.json
